@@ -1,23 +1,18 @@
-package linkedlist;
+package list;
 
 import java.util.NoSuchElementException;
 
 /**
- * This class is intended to help me understand how a linked list works by me
- * coding out linked list methods.
+ * This class is intended to help me understand how an LinkedList works by me
+ * implementing the List ADT and coding the LinkedList methods.
  * 
+ * @author Seth Brown
  * 
- * @author sethbrown
- * 
- * @version 07Sep2021
+ * @version 07 Sep 2021
  *
  */
 
 public class LinkedList<E> implements List<E> {
-
-	public static void main(String[] args) {
-
-	}
 
 	@Override
 	public void clear() {
