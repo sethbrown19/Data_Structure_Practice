@@ -87,7 +87,7 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public Object getValue() throws NoSuchElementException {
+	public E getValue() throws NoSuchElementException {
 		// TODO Auto-generated method stub
 		return null;
 	}

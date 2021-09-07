@@ -21,9 +21,9 @@ public class AList<E> implements List<E> {
 	private int currentPosition;
 
 	/**
-	 * Create a new list object with maximum size
+	 * Create a new ArrayList object with an input maximum size.
 	 * 
-	 * @param size the maximum size for this array
+	 * @param size the maximum size for this ArrayList.
 	 */
 	@SuppressWarnings("unchecked")
 	AList(int size) {
@@ -33,7 +33,7 @@ public class AList<E> implements List<E> {
 	}
 
 	/**
-	 * Create a list with the default capacity
+	 * Create an ArrayList with the default capacity.
 	 */
 	AList() {
 		this(DEFAULT_SIZE);
