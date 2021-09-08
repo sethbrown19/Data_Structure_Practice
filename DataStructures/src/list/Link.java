@@ -2,7 +2,7 @@ package list;
 
 /**
  * This class is used for the nodes in the linked list, stack, and queue. It is
- * used as a list node and contains fields to store the elements values and a to
+ * used as a list node and contains fields to store the elements values and to
  * store a pointer to the next node in the list.
  * 
  * 
@@ -12,6 +12,7 @@ package list;
 public class Link<E> {
 	private E e; // Value for this node
 	private Link<E> n; // Point to next node in list
+	private Link<E> p; // Point to the previous node in the list
 
 	/**
 	 * Constructor for the Link class taking in two parameters.
@@ -25,8 +26,7 @@ public class Link<E> {
 	}
 
 	/**
-	 * Constructor for the Link class taking in one parameter and setting the value
-	 * for the current node to null.
+	 * Constructor for the Link class.
 	 * 
 	 * @param inn the pointer to the next node.
 	 */
@@ -54,7 +54,7 @@ public class Link<E> {
 
 	/**
 	 * 
-	 * @return the next link in the node.
+	 * @return the next link in the list.
 	 */
 	Link<E> next() {
 		return n;
@@ -69,5 +69,24 @@ public class Link<E> {
 	Link<E> setNext(Link<E> inn) {
 		return n = inn;
 	}
+	
+	/**
+	 * 
+	 * @return the previous link in the list.
+	 */
+	Link<E> prev() {
+		return p;
+	}
+
+	/**
+	 * Set the next node in the list.
+	 * 
+	 * @param inn the pointer to the next node.
+	 * @return the Link to the previous node.
+	 */
+	Link<E> setPrev(Link<E> inn) {
+		return p = inn;
+	}
+	
 
 }
