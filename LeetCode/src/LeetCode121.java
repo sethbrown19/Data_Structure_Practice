@@ -26,23 +26,25 @@ public class LeetCode121 {
      * need a min price and max profit variable
      * iterate through the entire array
      * if the current price is less than the min price
-     *      set min price to current price
+     * set min price to current price
      * else if the current price minus the min price is greater than max profit
-     *      set max profit to current price minus min price
+     * set max profit to current price minus min price
      *
      * @param prices array of prices per day
      * @return profit - the sell minus the buy
      */
     public static int maxProfit(int[] prices) {
-        int minprice = Integer.MAX_VALUE;
-        int maxprofit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minprice)
-                minprice = prices[i];
-            else if (prices[i] - minprice > maxprofit)
-                maxprofit = prices[i] - minprice;
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                maxProfit = Math.max(maxProfit, price - minPrice);
+            }
+
         }
-        return maxprofit;
+        return maxProfit;
 
     }
 }
